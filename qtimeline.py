@@ -7,7 +7,6 @@ from PyQt5 import QtWidgets, QtGui, QtCore
 from PyQt5.QtCore import Qt, QPoint, QLine, QRect, QRectF, pyqtSignal
 from PyQt5.QtGui import QPainter, QColor, QFont, QBrush, QPalette, QPen, QPolygon, QPainterPath, QPixmap
 from PyQt5.QtWidgets import QWidget, QFrame, QScrollArea, QVBoxLayout
-import matplotlib.pyplot as plt
 import sys
 import os
 
@@ -68,10 +67,6 @@ class QTimeLine(QWidget):
         pal = QPalette()
         pal.setColor(QPalette.Background, self.backgroundColor)
         self.setPalette(pal)
-
-        pic = QPixmap('sample.png')
-        self.videoSamples.append(VideoSample(60, picture=pic, audio=load('array.npy')))
-        self.videoSamples.append(VideoSample(120, picture=pic, audio=load('array.npy')))
 
     def paintEvent(self, event):
         qp = QPainter()
