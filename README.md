@@ -2,7 +2,7 @@
 
 PyQt5 QTimeLine is an custom widget that provide a timeline fuction.
 
-# Fuctions
+# Functions
 
 - Create a scalable timeline.
 - Add video samples.
